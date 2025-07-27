@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Anime</title>
+        <style>
+            body {  
+                background: linear-gradient(45deg, #52eed1, #f5c015, #23a6d5, #cc23d5);
+                background-size: 200% 200%;
+                animation: gradientShift 9s ease infinite;
+            }
+            @keyframes gradientShift {
+                0%   { background-position: 0% 50%; }
+                50%  { background-position: 100% 50%; }
+                100% { background-position: 0% 50%; }
+            }
+            .container {
+                display: grid;
+                grid-template-columns: 1fr 2fr 2fr;
+                grid-template-rows: 220px 280px 280px;
+                margin: 20px;
+                gap: 40px;
+                grid-template-areas: 
+                "header header header"
+                "side box box"
+                "side box box";                
+            }
+            @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                "header"
+                "side"
+                "box"
+                "box"
+                "box"
+                "box";
+            }
+            }
+            .header {              
+                grid-area: header;
+                letter-spacing: 45px;  
+                font-weight: 900;
+                font-family: Copperplate, Papyrus, fantasy;
+                text-shadow: 3px 3px 1px black,
+                            0 0 15px rgb(255, 255, 120);
+                font-size: 60px;
+                color: rgb(248, 238, 130);
+                border: solid 3px rgb(245, 9, 9);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-image: none;
+                background-position: center;
+                position: relative;
+                z-index: 1;
+            }
+                .header::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background-image: url('https://wallpapercrafter.com/th800/152464-Son-Goku-Samurai-X-Saitama-One-Punch-Man-Dragon-Ball-Naruto-anime-Uzumaki-Naruto-Godzilla-Doraemon-K-ON-One-Piece-Monkey-D.-Luffy-Rurouni-Kenshin-Himura-Kenshin-Inuyas.jpg');
+                background-position: center;
+                filter: brightness(0.4);
+                z-index: -1;
+            }
+            .side {
+                grid-area: side;
+                padding: 20px;
+                background-color: bisque;
+                justify-content: flex-start;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                border: gray 2px dotted;
+                overflow-y: auto; 
+            }
+            .box {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 5px outset white; 
+                overflow: hidden;
+                border-radius: 10px;
+                transition: all 1s ease;
+                box-shadow:
+                    inset 0 0 10px rgba(255, 255, 255, 0.5),
+                    0 0 10px rgba(0, 0, 0, 0.8);
+            }            
+            .box:hover {
+                transform: scale(1.05);
+                box-shadow: 0 0 15px black;
+                cursor: pointer;
+                border-radius: 10px;
+            }
+            .box img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .overlay-text {
+                position: absolute;
+                color: white;
+                font-family: "Courier New", Courier, monospace;
+                font-size: 1.5rem;
+                text-shadow: 1px 1px 2px black;
+                z-index: 1;
+                transition: color 1s ease, text-shadow 0.5s ease, transform 1s ease;
+            }
+            .box:hover .overlay-text{
+                color:rgb(254, 230, 12);
+                text-shadow: 0 0 10px rgb(3, 3, 3);
+                font-weight: bold;
+                transform: scale(1.4);
+            }
+            .link{
+                position: absolute;
+                inset: 0;
+                z-index: 2;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">ANIME ADDICTS</div>
+            <div class="side">
+                MOST FAMOUS ANIMES OF ALL-T:<br>
+                <ul>
+                    <li>One Piece</li>
+                     <li>Naruto / Naruto Shippuden</li>
+                      <li>Attack on Titan</li>
+                       <li>Death Note</li>
+                        <li>Demon Slayer</li>
+                         <li>Dragon Ball Z</li>
+                          <li>Fullmetal Alchemist: Brotherhood</li>
+                           <li>Jujutsu Kaisen</li>
+                            <li>My Hero Academia</li>
+                             <li>Tokyo Ghoul</li>
+                              <li>Sword Art Online</li>
+                               <li>Hunter x Hunter</li>
+                                <li>Bleach</li>
+                                 <li>Code Geass</li>
+                                  <li>Magic Knight: Ray Earth</li>                 
+                </ul><br>
+                MY TOP 5 ALL-TIME FAVORITE:
+                <ol>
+                    <li>Bleach</li>
+                    <li>One Piece</li>
+                    <li>Demon Slayer</li>
+                    <li>Naruto</li>
+                    <li>Hunter x Hunter</li>
+                </ol>
+            </div>
+            <div class="box">
+                <img src="https://comicbook.com/wp-content/uploads/sites/4/2025/06/Bleach-TYBW-Ichigo-Kurosaki.jpg?w=1024" alt="Ichigo">
+                <div class="overlay-text">Watch Animes</div>
+                <a href="https://animetsu.cc/" target="_blank" class="link"></a>
+            </div>
+            <div class="box">
+                <img src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2023/08/gear-5-luffy-smiling-at-kaido-during-their-fight-in-one-piece.jpg" alt="Luffy">
+                <div class="overlay-text">Read Manga</div>
+                <a href="https://mangafire.to/home" target="_blank"" class="link"></a>
+            </div>
+            <div class="box">
+                <img src="https://lh7-us.googleusercontent.com/jBQMVZScyt0p9TV--0eIxhfWqTOdVEYU_w8e7nOBNcOMwYwXT97UI8W55fkM6vIaS8pViPKLLL7DBmZ_wAzko30uY2deB244oKXfblq3KBSwLVsozgssgbLxaT7BYRLs7sF8we_daY93LxTeFuLLFKg" alt="Naruto">
+                <div class="overlay-text">Discuss</div>
+                <a href="https://www.reddit.com/r/anime/" target="_blank" class="link"></a>
+            </div>
+            <div class="box">
+                <img src="https://4kwallpapers.com/images/wallpapers/tanjiro-kamado-3840x2160-10064.jpg" alt="Tanjiro">
+                <div class="overlay-text">Contact Us</div>
+            </div>
+        </div>
+    </body>
+</html>
