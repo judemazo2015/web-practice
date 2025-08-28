@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Video and Audio Demo</title>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                background: 
+                    linear-gradient(rgba(246, 244, 244, 0.3), rgba(255, 255, 255, 0.3)), 
+                    url("media/dm.jpg");
+                background: 
+                    linear-gradient(rgba(19, 18, 18, 0.6), rgba(254, 249, 249, 0.6)),
+                    url("media/dm.jpg");
+                background-size: cover;
+                color: white;
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                text-shadow: 1px 1px 10px black;
+            }       
+            video {
+                border: 5px outset rgb(247, 228, 82);
+                box-shadow: 2px 2px 10px black;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>The Battle of Tanjiro and Daki</h1>
+        <video width="640" height="360" controls loop muted poster="media/tanjiro.webp" preload="metadata">
+            <source src="media/slayer.mp4" type="video/mp4">
+            Your browser does not support this video format.
+        </video><br><br>
+        <audio controls preload="metadata" loop>
+            <source src="media/subway.mp3" type="audio/mp3">
+            Your browser does not support this audio format.
+        </audio>
+    </body>
+</html>

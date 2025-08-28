@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Grid Exercise 6</title>
+        <style>
+            .container {
+                height: 100vh;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 10px;
+                place-items: center;
+            }
+            .card {
+                display: grid;
+                position: relative;
+                grid-template-areas: 
+                "header"
+                "body";
+                width: 14rem;
+                height: 22rem;
+                border: solid 3px;
+                border-radius: 10px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                transition: all 1s ease;
+                z-index: 1;
+            }
+            .card:hover {
+                transform: scale(1.05);
+                box-shadow: 0 0 20px;
+            }
+            .header {
+                position: relative;
+                display: flex;
+                margin: 3%;
+                border-radius: 10px;
+                background-image: url("https://www.shutterstock.com/image-illustration/gold-background-luxury-abstract-grainy-260nw-2479199219.jpg");
+                background-position: center;
+                background-size: cover;
+                grid-area: header;
+                align-items: center;
+                margin-top: 10px;
+                justify-content: center;
+                text-align: center;
+                z-index: 2;
+            }
+            .title{
+                font-family: Copperplate, Papyrus, fantasy;
+                font-size: large;
+            }
+            .badge{
+                position: absolute;
+                top: 2px;
+                right: 2px;
+                color: black;
+                background-color: gold;
+                font-weight: bold;
+                padding:2px 5px;
+                border-radius: 5px;
+                border: goldenrod 1px solid;
+                font-size: 8px;
+                z-index: 3;
+            }
+            .body {
+                grid-area: body;
+                display: grid;
+                grid-template-columns: 100px 1fr;
+                overflow: hidden;
+                gap:20px;
+                padding: 10px;
+                padding-top: 70px;
+              
+            }
+            .img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                border: goldenrod groove 5px;
+            }
+            .description{
+                margin-top: 10px;
+                text-align: center;
+                font-size: small;
+            }
+            .c1 {
+                border-color: red;
+                background-color: rgb(249, 205, 205);
+            }
+            .c2 {
+                border-color: rgb(0, 21, 255);
+                background-color: rgb(206, 205, 249);
+            }
+            .c3 {
+                border-color: rgb(134, 5, 115);
+                background-color: rgb(249, 205, 245);
+            }
+            .c4{
+                border-color: rgb(134, 104, 5);
+                background-color: rgb(249, 236, 205);
+            }
+            .c5{
+                border-color: rgb(3, 179, 6);
+                background-color: rgb(205, 249, 218);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">     
+            <div class="card c1">   
+                <div class="header">
+                    <div class="title">Draco</div>
+                    <div class="badge">RARE</div>
+                </div>
+                <div class="body">
+                    <img class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqd4eIRfTJDLeylvT71t-W_vtKBiek_Kno4A&s" alt="dragon">
+                    <div class="description">This card allows you to summon the most powerful dragon</div>
+                </div>
+            </div>
+            <div class="card c2">   
+                <div class="header">
+                    <div class="title">Angeli-King</div>
+                    <div class="badge">SUPER RARE</div>
+                </div>
+                <div class="body">
+                    <img class="img" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/076dea75-2def-4445-b528-3fcf73d7c888/dgfw4rg-67f8a79c-9a73-4e7d-92c0-896f222f679e.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzA3NmRlYTc1LTJkZWYtNDQ0NS1iNTI4LTNmY2Y3M2Q3Yzg4OFwvZGdmdzRyZy02N2Y4YTc5Yy05YTczLTRlN2QtOTJjMC04OTZmMjIyZjY3OWUuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.hbfLWD5WsJVmQqrwDVhAzArYgGd9H4j6su_MV1KwnbI" alt="dragon">
+                    <div class="description">This card allows you to summon the most powerful angel</div>
+                </div>
+            </div>
+            <div class="card c3">   
+                <div class="header">
+                    <div class="title">King of the Underworld</div>
+                    <div class="badge">SUPER RARE</div>
+                </div>
+                <div class="body">
+                    <img class="img" src="https://thumbs.dreamstime.com/b/power-demon-lord-dive-mysterious-sinister-world-dark-creatures-abominations-malevolent-ruler-underworld-delve-318603146.jpg" alt="dragon">
+                    <div class="description">This card allows you to summon the most powerful demon</div>
+                </div>
+            </div>
+            <div class="card c4">   
+                <div class="header">
+                    <div class="title">Golem King</div>
+                    <div class="badge"> RARE</div>
+                </div>
+                <div class="body">
+                    <img class="img" src="https://pics.craiyon.com/2023-07-21/6862ffbfdcef464dbfd3978a10d34c8a.webp" alt="dragon">
+                    <div class="description">This card allows you to summon the most powerful golem</div>
+                </div>
+            </div>
+            <div class="card c5">   
+                <div class="header">
+                    <div class="title">Earth Goddess</div>
+                    <div class="badge"> ULTRA RARE</div>
+                </div>
+                <div class="body">
+                    <img class="img" src="https://i.pinimg.com/236x/81/0f/e3/810fe3ce87facca0369ac6d8263adf6b.jpg?nii=t" alt="dragon">
+                    <div class="description">This card allows you to summon the ruler of the earth. User of this card also doubles his/her life-points.</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

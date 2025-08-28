@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Absolute Relative Demo</title>
+        <style>
+            .profile-box {
+                position: relative;
+                height: 150px;
+                width: 150px;
+                background-color: lightgray;
+            }
+            .badge {
+                position: absolute;
+                border-radius: 50%;
+                background-color: red;
+                width: 25px;
+                aspect-ratio: 1;
+                top: 5px;
+                right: 5px;
+
+                font-weight: bold;
+                font-size: 14px;
+                color: rgb(249, 255, 192);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="profile-box">
+            <div class="badge">3</div>
+        </div>
+    </body>
+</html>

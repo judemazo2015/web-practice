@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Grid Exercise 4</title>
+        <style>
+            .container {
+                height: 100vh;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, 1fr);                
+                gap: 10px;
+                place-items: center;
+            }
+            .card {
+                display: grid;
+                grid-template-rows: 1fr 3fr;
+                border: solid 3px;
+                width: 11rem;
+                height: 20rem;
+                padding: 20px;
+                position: relative;
+                border-radius: 10px;                
+                text-align: center;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                transition: all 0.5s ease;
+                z-index: 1;
+            }
+            .card:hover {
+                transform: scale(1.04);
+            }
+            .c1{
+                border-color: blue;
+                background-color: rgb(214, 224, 244);
+                color: rgb(7, 7, 193);
+            }
+            .c2{
+                border-color: green;
+                background-color: rgb(213, 247, 211);
+                color: rgb(8, 157, 105);
+            }
+            .c3{
+                border-color: rgb(178, 120, 18);
+                background-color: rgb(247, 237, 211);
+                color: rgb(157, 130, 8);
+            }
+            .c4{
+                border-color: rgb(235, 66, 4);
+                background-color: rgb(247, 221, 211);
+                color: rgb(157, 65, 8);
+            }
+            .title {
+                font-family: "Brush Script MT", cursive;
+                font-size: xx-large;
+            }
+            .description {
+                position: absolute;
+                top: 60%;
+                color: black;
+                z-index: 2;
+                text-align: center;
+                padding: 10px;
+                font-family: Garamond, serif;
+                font-size: large;
+                border: 1px dotted;
+                background-image: url("https://static.vecteezy.com/system/resources/thumbnails/014/856/718/small/abstract-white-and-gray-gradient-background-illustration-vector.jpg");
+            }
+            .tag {
+               position: absolute; 
+               top: 5px;
+               right: 5px;
+               color: black;
+               background-color: gold;
+               font-weight: bold;
+               padding:2px 5px;
+               border-radius: 5px;
+               border: goldenrod 1px solid;
+               font-size: 11px;
+               
+            }
+            img {
+                position: absolute;
+                height: 100px;
+                top: 100px;
+                left: 65px;
+                right: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="card c1">
+                <div class="title">Air Gem</div>
+                <div class="description">The user of this gem will possess the power to control air.</div>
+                <div class="tag">NEW</div>
+                <img src="https://static.wikia.nocookie.net/encantadiasaga/images/a/af/Air_Gem_symbol.svg/revision/latest?cb=20160824054439" alt="symbol">
+            </div>
+            <div class="card c2">
+                <div class="title">Water Gem</div>
+                <div class="description">The user of this gem will possess the power to control water.</div>
+                <div class="tag">NEW</div>
+                <img src="https://static.wikia.nocookie.net/encantadiasaga/images/c/c1/Water_Devas_symbol.svg/revision/latest?cb=20160824052525" alt="symbol">
+            </div>
+            <div class="card c3">
+                <div class="title">Earth Gem</div>
+                <div class="description">The user of this gem will possess the power to control land.</div>
+                <div class="tag">NEW</div>
+                <img src="https://static.wikia.nocookie.net/encantadiasaga/images/9/96/Earth_Gem_symbol.svg/revision/latest?cb=20160824054451" alt="symbol">
+            </div>
+            <div class="card c4">
+                <div class="title">Fire Gem</div>
+                <div class="description">The user of this gem will possess the power to control flame.</div>
+                <div class="tag">NEW</div>
+                <img src="https://static.wikia.nocookie.net/encantadiasaga/images/1/13/Fire_Gem_symbol.svg/revision/latest?cb=20160824054427" alt="symbol">
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sample Grid</title>
+        <style>
+            .container {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 100px 100px 100px;
+                gap: 40px;
+            }
+            .box {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: ridge rgb(255, 7, 226) 5px;
+                background-color: rgb(252, 232, 251);
+                box-shadow: 1px 1px 4px black;
+                transition: all 0.5s ease;
+                border-radius: 10px;
+            }
+            .box:hover {
+                transform: scale(1.05);
+                background-color: rgb(239, 253, 222);
+                box-shadow: 0 0 10px rgb(214, 35, 238);
+                cursor: pointer;
+            }
+            .row-span {
+                grid-row: span 2;
+                grid-column: span 2;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box row-span">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box span2">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+        </div>
+    </body>
+</html>

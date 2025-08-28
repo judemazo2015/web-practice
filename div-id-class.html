@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Inspring quote</title>
+        <style>
+            #container {
+                border: 10px ridge rgb(25, 128, 217);
+                padding: 0px 20px;
+                margin: 10px auto;
+                width: 800px;
+                background-color: #f5f1c0;
+                transition: all 0.5s ease;
+
+                position: absolute;
+                top: 30%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            #container:hover {
+                background-color: rgb(247, 239, 220);
+                transform: translate(-50%, -50%) scale(1.2);
+                box-shadow: 0 0 20px 2px;
+            }
+            .heading {
+                font-size: large;
+                color: red;
+            }
+            .tagline {
+                font-style: italic;
+                font-size: smaller;
+                color: darkgreen;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <h1 class="heading">Someone says:</h1>
+            <p class="tagline">
+                “Books are not about passing time. They're about other lives. Other worlds. Far from wanting time to pass, one just wishes one had more of it. If one wanted to pass the time one could go to New Zealand.”
+            </p>
+        </div>
+    </body>
+</html>

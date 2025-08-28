@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Grid Auto Flow Column</title>
+    <style>
+      .container {
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-rows: repeat(3, 100px); /* vertical stacking */
+        grid-auto-columns: 1fr;               /* same width columns */
+        gap: 10px;
+        background: lightyellow;
+        padding: 20px;
+      }
+
+      .box {
+        background-color: teal;
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">A</div>
+      <div class="box">B</div>
+      <div class="box">C</div>
+      <div class="box">D</div>
+      <div class="box">E</div>
+      <div class="box">F</div>
+    </div>
+  </body>
+</html>

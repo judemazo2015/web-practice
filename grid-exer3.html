@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Grid Exercise 3</title>
+        <style>
+            .container {
+                display: grid;
+                height: 100vh;
+                position: relative;
+                grid-template-columns: 1fr 2fr 1fr;
+                grid-template-rows: 1fr 3fr;
+                grid-template-areas: 
+                "main main main"
+                "left center right";
+                gap: 10px;
+                padding: 20px;
+                z-index: 1;
+            }
+
+            .main {
+                grid-area: main;
+                display: flex;
+                position: relative;
+                border: solid 1px;
+                justify-content: center;
+                align-items: center;
+                font-size: x-large;
+                z-index: 2;
+            }
+            .left {
+                grid-area: left;
+                display: flex;
+                position: relative;
+                border: solid 1px;
+                justify-content: center;
+                align-items: center;
+                font-size: x-large;
+                z-index: 2;
+            }
+            .center {
+                grid-area: center;
+                display: flex;
+                position: relative;
+                border: solid 1px;
+                justify-content: center;
+                align-items: center;
+                font-size: x-large;
+                z-index: 2;
+            }
+            .notif {
+                position: absolute;
+                height: 50px;
+                width: 50px;
+                top: 10px;
+                right: 10px;
+                border-radius: 10px;
+                border: dotted blue 2px;
+                background: yellow;
+                z-index: 3;
+            }
+            .right {
+                grid-area: right;
+                display: flex;
+                position: relative;
+                border: solid 1px;
+                justify-content: center;
+                align-items: center;
+                font-size: x-large;
+                z-index: 2;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="main">MAIN</div>
+            <div class="left">LEFT</div>
+            <div class="center">
+                CENTER
+                <div class="notif"></div>
+            </div>
+            <div class="right">RIGHT</div>
+        </div>
+    </body>
+</html>

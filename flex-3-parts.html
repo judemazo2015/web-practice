@@ -1,0 +1,56 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Flex 3 Parts</title>
+        <style>
+            .container {
+                display: flex;
+                gap: 20px;
+                border: rgb(40, 106, 249) ridge 10px;
+                background-color: rgb(208, 244, 213);
+                padding: 20px;
+                flex-wrap: wrap;
+                border-radius: 20px;
+                margin: 20px;
+            }
+            .box {
+                display: flex; 
+                justify-content: center;
+                align-items: center;
+
+                background-color: rgb(196, 250, 230);
+                padding: 15px;
+                border: ridge rgb(157, 160, 236) 10px;   
+                text-align: center;
+                font-size: 25px;
+                color: rgb(47, 45, 22);
+                transition: all 1s ease; 
+                font-family: "Courier New", Courier, monospace;
+                font-weight: bold;
+                border-radius: 10px;
+                height: 100px;
+                width: 100px;
+            }
+            .box:hover {
+                transform: scale(1.03);
+                background-color: white;
+                box-shadow: 0 0 10px rgb(157, 160, 236);
+                color: rgb(249, 9, 9);
+                text-shadow: 0 0 10px rgba(249, 9, 9, 0.2);
+                cursor: pointer;
+                font-size: 38px;
+                font-family: Copperplate, Papyrus, fantasy;
+            }
+            .box1 { flex: 4;}     
+            .box2 { flex: 2;}
+            .box3 { flex: 1; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box box1">One Piece</div>
+            <div class="box box2">Naruto</div>
+            <div class="box box3">Bleach</div>
+        </div>
+    </body>
+    </html>

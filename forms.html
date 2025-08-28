@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Forms Demo</title>
+        <style>
+            fieldset{
+                width: 600px;
+                margin: 20px;
+                background-color: khaki;
+                border: outset 5px gold;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: 15px;
+                box-shadow: 2px 2px 10px black;
+                transition: all 1s ease;
+            }
+            fieldset:hover{
+                transform: scale(1.05);
+            }
+            body {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background: 
+                    linear-gradient(rgba(25, 25, 26, 0.6), rgba(255, 254, 251, 0.6)),
+                    url("media/dm.jpg");
+                background-size: cover;
+            }
+            legend {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: 14px;
+                color: rgb(163, 97, 10);
+                font-weight: bold;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="form1.html">
+            <fieldset>
+                <legend>Login</legend>
+                <label for="user">Username </label>
+                <input type="text" id="user" required minlength="5" placeholder="username"></input>
+                <br><br>
+
+                <label for="pass">Password </label>
+                <input type="password" id="pass" required minlength="8" placeholder="password"></input>
+                <br><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Personal Info</legend>
+                <label for="name">Full name </label>
+                <input type="text" id="name">
+                <br><br>
+
+                <label for="email">Email </label>
+                <input type="email" id="email">
+                <br><br>
+
+                <label for="bdate">Birthdate </label>
+                <input type="date" id="bdate">
+                <br><br>
+
+                <label for="num_sib">Number of siblings </label>
+                <input type="number" id="num_sib" min="0">
+                <br><br>
+
+                <label for="percent">Rate your honesty (100 is the highest) </label>
+                <input type="range" id="percent" min="0" max="100" value="50" step="5" oninput="this.nextElementSibling.textContent = this.value + '%'">
+                <output>100%</output>
+                <br><br>
+
+                <labelS>Year level </label><br>
+                <input type="radio" id="1st" name="year">
+                <label for="1st">1st Year</label>
+                <input type="radio" id="2nd" name="year">
+                <label for="2nd">2nd Year</label>
+                <input type="radio" id="3rd" name="year">
+                <label for="3rd">3rd Year</label>
+                <input type="radio" id="4th" name="year">
+                <label for="4th">4th Year</label>
+                <br><br>
+
+                <label for="course">Choose Program </label>
+                <select id="course">
+                    <option value="1">BSIT</option>
+                    <option value="2">BSA</option>
+                    <option value="3">BSN</option>
+                    <option value="4">BSCS</option>
+                    <option value="5">BSME</option>
+                </select>
+                <br><br>
+
+                <label>Preferred Subjects </label><br>
+                <input type="checkbox" id="int">
+                <label for="int">INTCOM11</label>
+                <input type="checkbox" id="comp">
+                <label for="comp">COMPROG11</label>
+                <input type="checkbox" id="it">
+                <label for="it">ITWEBDEV11</label>
+                <input type="checkbox" id="math">
+                <label for="math">MATH 101</label>
+                <input type="checkbox" id="soc">
+                <label for="soc">SOCIO 101</label>
+                <br><br>                
+                <input type="reset">
+            </fieldset>
+
+            <fieldset>
+                <legend>Comments</legend>
+                <label for="tbox">Write something about yourself</label><br>
+                <textarea id="tbox" cols="40" rows="10">Hi! My name is </textarea><br><br>
+                <input type="submit" value="Submit">
+            </fieldset>
+            z
+        </form>
+    </body>
+</html>

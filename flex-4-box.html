@@ -1,0 +1,91 @@
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>One Piece Characters</title>
+            <style>
+                body {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    min-height: 100vh;
+                    margin: 0;
+                }
+                .container {
+                    display: flex;
+                    flex-wrap: wrap;
+                    border-radius: 10px;
+                    height: 500px;
+                    width: 95%;
+                    align-items: center;
+                    
+                    background-image: url('https://wallpapers.com/images/hd/one-piece-title-wbg2f7sm18m86ryk.jpg');
+                    background-size:100% 180%;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    border: 15px ridge  rgb(90, 87, 250);
+                    box-shadow: 0 0 20px rgba(94, 216, 249, 1);
+                }
+                .box {
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content:flex-start;
+                    margin: 35px;
+                    padding: 10px;
+                    border-radius: 10px;
+                    height: 100px;
+                    width: 150px;
+
+                    color: rgb(253, 253, 255);
+                    background-color: rgb(207, 240, 255);
+                    border: 7px outset rgb(36, 220, 252);
+                    font-family: URW Chancery L, cursive;
+                    font-size: 25px;
+                    text-shadow: 3px 2px 1px rgb(3, 30, 67);
+                    transition: all 0.5s ease;
+                    box-shadow: 2px 2px 5px black;
+                    font-weight: 500;
+                }
+                .box:hover {
+                    cursor: pointer;
+                    transform: scale(1.1);
+                    background-color: rgb(239, 249, 246);
+                    box-shadow: 0 0 9px rgba(0, 0, 0, 0.5);
+                }
+                .b1 { flex: 3; 
+                    background-image: url('https://scc10.com.br/wp-content/uploads/2024/10/Monkey-D.-Luffy-gear.webp');
+                    background-size: 100% 150%;
+                    background-position:top;
+                }
+                .b1:hover { color: rgba(254, 16, 16, 0.868); }
+                .b2 { 
+                    flex: 2;
+                    background-image: url('https://i.ytimg.com/vi/vyz46KSzVL0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAXvvCFYTvm-gPHgUp_iXaC0w8kUQ');
+                    background-size: 100% 100%;
+                }
+                .b2:hover { color: rgb(251, 157, 5); }
+                .b3 { 
+                    flex: 2; 
+                    background-image: url('https://i.pinimg.com/736x/d0/94/2d/d0942ddcbd63432f53d708fb9bfb307a.jpg');
+                    background-size: 100% 120%;
+                    background-position: center;
+                }
+                .b3:hover { color: rgb(244, 248, 10); }
+                .b4 { 
+                    flex: 1;
+                    background-image: url('https://static1.cbrimages.com/wordpress/wp-content/uploads/2024/09/nami-is-attacking-ulti-during-the-raid-on-onigashima-in-one-piece-s-wano-arc-1.png');
+                    background-size: 210% 130%;
+
+
+                }
+                .b4:hover { color: rgba(246, 90, 155, 0.868); }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <div class="box b1">Luffy</div>
+                <div class="box b2">Zoro</div>
+                <div class="box b3">Sanji</div>
+                <div class="box b4">Nami</div>
+            </div>
+        </body>
+    </html>

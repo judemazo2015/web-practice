@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Grid Aligning Demo</title>
+    <style>
+      .container {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        background: lavenderblush;
+
+        place-items: center;
+        /* Try changing to: start, end, stretch */
+      }
+
+      .box {
+        background-color: tomato;
+        width: 60px;
+        height: 60px;
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">A</div>
+      <div class="box">B</div>
+      <div class="box">C</div>
+      <div class="box">D</div>
+      <div class="box">E</div>
+      <div class="box">F</div>
+    </div>
+  </body>
+</html>

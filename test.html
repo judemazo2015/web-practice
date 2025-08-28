@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Table Demo</title>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 50vh;
+                margin: 0;
+
+                background: linear-gradient(45deg, rgb(250, 238, 173), #e9c10e, rgb(255, 174, 0), rgb(247, 243, 209));
+                background-size: 1000% 1000%;
+                animation: gradientShift 8s ease infinite ;
+            }
+            @keyframes gradientShift {
+                0%   { background-position: 0% 50%; }
+                50%  { background-position: 100% 50%; }
+                100% { background-position: 0% 50%; }
+            }
+            table { 
+                border-style: outset;
+                width: 60%;
+                border-width: 7px;
+                border-color: goldenrod;
+                text-align: justify;
+                transition: all 1s ease;
+            }
+            table:hover {
+                transform: scale(1.3);
+                box-shadow: 0 0  15px black;
+                width: 75%;
+            }
+            tbody td:hover {
+                font-weight: bold;
+                font-size: 120  %;
+                cursor: pointer;
+            }
+            th {
+                background-color: rgb(247, 247, 15);
+                padding: 10px;
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-size: 14px;
+                text-align: center;
+            }
+            td {
+                padding: 5px;
+                background-color: rgb(229, 250, 234);
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 14px;
+            }
+            tfoot td{
+                text-align: center;
+                font-size: 16px;
+                font-family: "Brush Script MT", cursivel;
+                padding: 2px;
+                background-color: aliceblue;
+            }   
+        </style>
+    </head>
+    <body>
+        <table border="2">
+            <thead>
+                <tr>
+                    <th colspan="2">Name of Students</th>
+                    <th>Age</th>
+                    <th>Year</th>
+                    <th>Section</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="2">Yvonnie Jude Mazo</td>
+                    <td>29</td>
+                    <td>1st</td>
+                    <td>1A</td>
+                </tr>
+                <tr >
+                    <td colspan="2" rowspan="2">Sabrina Carpenter</td>
+                    <td>23</td>
+                    <td>2nd</td>
+                    <td>1B</td>
+                </tr>
+                <tr>
+                    <td>24</td>
+                    <td>3rd</td>
+                    <td>1C</td>                
+                </tr>
+                <tr>
+                    <td colspan="2">Bruno Mars</td>
+                    <td>40</td>
+                    <td>4th</td>
+                    <td>1F</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Kendrick Lamar</td>
+                    <td>36</td>
+                    <td>2nd</td>
+                    <td>1E</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Ariana Grande</td>
+                    <td>32</td>
+                    <td>1st/td>
+                    <td>1D</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="5"><em></i>These information are partial and unofficial.
+                        Contact administration for inquiries.</em></td>
+                </tr>
+            </tfoot>
+        </table>
+    </body>
+</html>

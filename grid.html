@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sample Grid</title>
+        <style>
+            .container {
+                display: grid;
+                grid-template-columns: 200px 200px 200px;
+                
+            }
+            .box {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: ridge black 5px;
+                background-color: rgb(234, 218, 179);
+                box-shadow: 1 1 4;
+                transition: all 0.5s ease;
+                margin: 10px;
+
+            }
+            .box:hover {
+                transform: scale(1.05);
+                background-color: azure;
+                box-shadow: 0 0 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flexbox Demo</title>
+        <style>
+            .container {
+                display: flex;
+                border: 10px ridge rgb(235, 190, 78);
+                justify-content:space-around;
+                align-items: center;
+                height: 300px;
+                background-color: rgb(246, 253, 210);
+                flex-direction: row-reverse;
+                flex-wrap: wrap;
+            }
+            @media (max-width: 600px){
+                .container{
+                    flex-direction: column;
+                    height: auto;
+                }
+                .box {
+                    margin: 15px 0; 
+                }
+            }
+            .box {
+                display: flex;
+                height: 90px;
+                width: 90px;
+                justify-content: center;
+                display: flex;
+                height: 50px;
+                width: 50px;
+                align-items: center;
+                font-size: 25px;
+                transition: all 0.5s ease;
+            }
+            .box:hover {
+                transform: scale(1.1);
+                background-color: rgb(244, 243, 238);
+            }
+
+            .b1 {
+                font-weight: bold;
+                font-family: Garamond, serif;
+                color: rgb(236, 38, 81);
+                background-color: plum;
+                border: 10px inset rgb(169, 4, 169);
+                box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+                text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
+            }
+            .b2 {
+                font-family: 'Brush Script MT', cursiv;
+                color: blue;
+                background-color: rgb(192, 171, 255);
+                border: 10px ridge rgb(112, 76, 245);
+                box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+            }
+            .b3 {
+                font-family: Copperplate, Papyrus, fantasy;
+                color: rgb(14, 118, 14);
+                background-color: rgb(160, 221, 210);
+                border: 10px outset rgb(34, 117, 11);
+                box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);   
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box b1">Evo</div>
+            <div class="box b2">Jude</div>
+            <div class="box b3">Von</div>
+        </div>
+    </body>
+</html>
