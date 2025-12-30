@@ -1,0 +1,6 @@
+function double(number) {
+    return number * 2;
+}
+
+let result = double(10);
+alert(result);

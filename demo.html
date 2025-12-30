@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Changing Content and Styles Demo JS</title>
+    </head>
+    <body>
+        <h2 id="headline">Click the link:</h2>
+        <a id="myLink" href="https://google.com">Google</a>
+
+        <script>
+        let link = document.getElementById("myLink");
+
+        // Get the current href
+        console.log("Before:", link.getAttribute("href"));
+
+        // Change the link
+        link.setAttribute("href", "https://openai.com");
+        link.textContent = "OpenAI";
+
+        console.log("After:", link.getAttribute("href"));
+        </script>
+    </body>
+</html>

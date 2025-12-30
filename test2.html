@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS DOM Demo</title>
+    </head>
+    <body>
+        <h1 id="header">I am Jude</h1>
+        <p class="description">I am 29 years old.</p>
+        <p class="description">I live in Cebu City.</p>
+
+        <script>
+            let header = document.getElementById("header");
+            header.textContent = "New Text";
+
+            let firstDesc = document.querySelector(".description");
+            firstDesc.style.color = "red";
+
+            let allDesc = document.querySelectorAll(".description");
+            allDesc.forEach(desc=>{
+                desc.style.background = "yellow";
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Changing Content and Styles Demo JS</title>
+    </head>
+    <body>
+        <h1 id="greeting">Hello</h1>
+        <p id="text">I am learning Javascript!</p>
+
+        <script>
+            let heading1 = document.getElementById("greeting");
+            heading1.textContent = "Welcome";
+            heading1.style.color = "green";
+
+            let par = document.getElementById("text");
+            par.textContent = "DOM is fun!";
+            par.style.fontSize = "20px";
+        </script>
+    </body>
+</html>

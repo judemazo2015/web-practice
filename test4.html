@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Get and Set Attributes Demo JS</title>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 50px;
+            }
+            #btn {
+                width: 120px;
+                height: auto;   
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                background: linear-gradient(rgb(226, 249, 113, 0.6), rgb(249, 227, 119, .6));
+                border-radius: 10px;
+                cursor: pointer;
+                box-shadow: 1px 1px 2px black;
+                transition: all ease 0.5s;
+            }
+            #btn:hover {
+                transform: scale(1.03) translateY(-2px);
+            }
+            #btn:active {
+                transform: translateY(10px);
+            }
+
+            #pic {
+                width: 500px;
+                height: 300px;
+                object-fit: cover;
+                box-shadow: 4px 4px 10px black;
+            }
+        </style>
+    </head>
+    <body>
+        <img id="pic" src="cat.avif" alt="cat pic"><br>
+        <button id="btn">Click and see a magic!</button>
+        <audio id="scream" src="scream.mp3"></audio>
+
+        <script>
+            let pic = document.getElementById("pic");
+            let btn = document.getElementById("btn");
+            let scream = document.getElementById("scream");
+
+            let clicks = 0;
+            btn.addEventListener("click", function(){
+                clicks++;
+                if (clicks==1){
+                    pic.setAttribute("src", "dog.webp");
+                    btn.style.backgroundColor = "red";
+                    btn.innerHTML = "Changed.<br> Don't click again!";
+                }
+                else if (clicks==2){
+                    scream.play();
+                    btn.style.display = "none";
+                    pic.setAttribute("src", "ghost.jpg");
+                    pic.style.width = "170vh";
+                    pic.style.height ="90vh";
+
+                    let colors = ["black", "red"];
+                    let i = 0, j=0;
+                    let flash = setInterval(() => {
+                        document.body.style.backgroundColor = colors[i];
+                        i++;
+                        if (i === colors.length) {
+                            i=0;
+                            j++
+                        }
+                        if (j==10){
+                            clearInterval(flash);
+                            pic.style.display = "none";
+                            document.body.style.marginTop = "200px";
+                            document.body.textContent = "NEXT TIME LISTEN TO THE INSTRUCTIONS, OKAY?";
+                            document.body.style.fontSize = "50px";
+                        }
+                    }, 300);
+                    setTimeout(() => {
+                        alert("I TOLD YOU NOT TO CLICK AGAIN!");
+                    }, 2000);
+                }
+            });
+        </script>
+    </body>
+</html>
