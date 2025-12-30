@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Class Schedule</title>
+        <style>
+            body {  
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background: linear-gradient(rgba(204, 229, 243, 0.6)),
+                url("https://scontent.fceb9-1.fna.fbcdn.net/v/t39.30808-6/475744498_1010433011127723_3968076717100549902_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeFeQ72yQWncFZ4c-JTnV_75yB3x6_-2UzrIHfHr_7ZTOhbgXFxtLf-I5MCyrw4iAPoF1HLl_1ahv3pPMJPa1l54&_nc_ohc=Orzikls4X1oQ7kNvwGfbemY&_nc_oc=AdkXklaz_ruMjpHypIiol9nmPKhEThB1uXOhYBVShZkHvc4syzDc_mr-2bA1O2sY9yo&_nc_zt=23&_nc_ht=scontent.fceb9-1.fna&_nc_gid=Ek1Qs-mONMHv2DaEkf_Mhw&oh=00_AfaODiVMDBODmmbUnzn3_YhgSxFJIWJyfLcTYZi6Y10NSQ&oe=68C851A0");
+                background-position: center;
+                background-size: 105% auto;
+                background-attachment: fixed;
+            }
+            h1#header{
+                margin-top: 50px;
+                margin-bottom: 15px;
+                color: rgb(151, 66, 242);
+                text-align: center;
+                font-family: Garamond, serif;
+                font-size: 60px;
+                font-weight: lighter;
+                text-shadow: 1px 1px 2px rgba(9, 9, 9, 0.7);
+                font-family: "Brush Script MT", cursive;
+            }
+            td.day{
+                font-family: Tahoma, Verdana, sans-serif;
+                font-weight: bold;
+                font-size: 18px;
+                background-color: rgba(245, 245, 20, 0.5);  
+                text-shadow: 0px 1px 1px rgb(132, 131, 131);
+            }
+            p#details{
+                background: linear-gradient(rgba(243, 239, 243, 0.7), rgba(60, 153, 253, 0.7));
+                margin-bottom: 15px;
+                border: 2px dotted rgb(0, 76, 255);
+                border-radius: 5px;
+                padding: 10px;
+                font-size: 18px;
+                font-weight: bold;
+                font-family: Garamond, serif;
+                box-shadow: 1px 1px 2px black;
+                text-transform: uppercase;
+            }
+            td.sub {
+                font-style: italic;
+                font-weight: bold;
+                text-align: center;
+                background-color: rgba(248, 248, 176, 0.7);
+            }
+            td.time {
+                font-weight: bold;
+            }
+            th{
+                font-size: 20px;
+                font-family: Garamond, serif;
+                padding: 10px;
+                text-shadow: 1px 1px 1px rgb(100, 100, 100);
+            }
+            td {    
+                font-family: Garamond, serif;
+                font-size: large;
+                background-color: rgba(242, 245, 204, 0.5);
+                padding: 15px;
+            }
+            table {
+                vertical-align: middle;
+                border-radius: 5px;
+                border-color: #3f9d94;
+            }
+            thead {
+                background: linear-gradient(rgba(254, 251, 255, 0.5), rgba(141, 252, 215, 0.8));
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1 id="header">My Class Schedule</h1>
+        <p id="details">Yvonnie Jude Ala Mazo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BSIT - 1ST YR. (1A)</p>
+        <table border="3" cellpadding="7">
+            <thead>
+                <tr>
+                    <th>DAY</th>
+                    <th>SUBJECT</th>
+                    <th>TIME</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                   <td class="day" rowspan="4">MONDAY,<br> WEDNESDAY,<br> FRIDAY</td>
+                   <td  class="sub"> SOCIO 101</td>
+                   <td class="time"> 7:30 - 8:30 AM</td>
+                </tr>
+                <tr>
+                    <td class="sub">INTCOM11</td>
+                    <td class="time">8:30 - 9:30 AM</td>
+                </tr>
+                <tr>
+                    <td class="sub">COMPROG11 (LAB)</td>
+                    <td class="time">9:30 - 10:30 AM</td>
+                </tr>
+                <tr>
+                    <td class="sub">COMPROG11 (LECTURE)</td>
+                    <td class="time">10:30 - 11:30 AM</td>
+                </tr>
+                <tr>
+                    <td class="day" rowspan="4">TUESDAY,<br>THURSDAY</td>
+                    <td class="sub">ENTREP 101</td>
+                    <td class="time">7:30 - 9:00 AM</td>
+                </tr>
+                <tr>
+                    <td class="sub">MATH 101</td>
+                    <td class="time">9:00 - 10:30 AM</td>
+                </tr>
+                <tr>
+                    <td class="sub">ITWEBDEV (LECTURE)</td>
+                    <td class="time">10:30 - 11:30 AM</td>
+                </tr>
+                <tr>
+                    <td class="sub">ITWEBDEV (LAB) 101</td>
+                    <td class="time">11:30 AM - 1:00 PM</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DIV Span Demo</title>
+        <style>
+            body {
+                padding: 5px;
+                background: linear-gradient(45deg, rgb(241, 194, 118), rgb(241, 136, 124), rgb(235, 247, 20), rgb(255, 0, 208));
+                background-size: 400% 400%;
+                animation: gradientShift 9s ease infinite;
+                height: 100vh;
+
+                display: grid;
+                grid-template-areas: 
+                "header header"
+                "sidebar main";
+                grid-template-rows: 25% 75%;
+                grid-template-columns: 20% 80%;
+            }
+            @keyframes gradientShift {
+                0%   { background-position: 0% 50%; }
+                50%  { background-position: 100% 50%; }
+                50%  { background-position: 100% 50%; } 
+                100% { background-position: 0% 50%; }
+            }
+            .container {
+                border: 2px dotted rgba(9, 9, 9, 0.5);
+                margin: 1px;
+            }
+            #main {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: linear-gradient(rgba(81, 53, 53, 0.4)), 
+                url("media/nature.jpg");
+                background-position: center;
+                background-size: cover;
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+            }
+            #sidebar {
+                background: linear-gradient(rgba(108, 65, 65, 0.7)),
+                url("media/red_clouds.png");
+                background-size: contain;
+                padding: 5px;
+                padding-top: 20px;
+                font-family: Georgia, serif;
+                font-size: 15px;
+
+            }
+            #header {
+                display: flex;  
+                background: linear-gradient(rgba(95, 86, 86, 0.3)),
+                url("media/cosmo.jpg");
+                background-size: cover;
+                background-position: center;
+                font-family: Brush Script MT, Brush Script Std, cursive;
+                font-size: 100px;
+                justify-content: center;
+                align-items: center;
+                color: rgb(214, 15, 15);
+                text-shadow: 1px 1px 5px black;
+            }
+            #your {
+                color: rgb(250, 229, 88);
+            }
+            #des {
+                color: rgb(85, 85, 253);
+            }
+            #now {
+                color: greenyellow;
+            }
+            .card {
+                height: 320px;
+                width: 220px;
+                border: 2px solid rgb(234, 183, 19);
+                border-radius: 15px;
+                margin: 30px;   
+                box-shadow: 1px 1px 4px;
+                transition: all ease 0.7s;
+            }
+            .card:hover{
+                cursor: pointer;
+                transform: scale(1.06);
+                box-shadow: 0px 0px 10px rgba(255, 255, 255);
+            }
+            #c1{
+                background: radial-gradient(rgba(255,255,255, 0.7), rgba(135, 134, 135, 0.7), rgba(35, 34, 34, 0.7)),
+                url("media/angel.jpg");
+                background-size: 220px 330px;
+                background-position: center;
+            }
+            #c1:hover {
+                background: linear-gradient(rgba(71, 67, 70, 0.3)),
+                url("media/angel.jpg");
+                background-size: 220px 330px;
+                background-position: center;
+            }
+            #c2{
+                background: radial-gradient(rgba(255,255,255, 0.7), rgba(106, 181, 246, 0.7), rgb(8, 115, 208, 0.7) ),
+                url("media/angel1.jpg");
+                background-size: cover;
+                background-position: center;
+            }
+            #c2:hover {
+                background: linear-gradient(rgba(84, 117, 234, 0.3)),
+                url("media/angel1.jpg");
+                background-size: cover;
+                background-position: center;
+            }
+            #c3{
+                background: radial-gradient(rgba(255,255,255, 0.7), rgba(106, 246, 167, 0.7),  rgb(14, 190, 91, 0.7)),
+                url("media/angel2.jpg");
+                background-size: 300px 440px;
+                background-position: center;
+            }
+            #c3:hover {
+                background: linear-gradient(rgba(84, 234, 137, 0.3)),
+                url("media/angel2.jpg");
+                background-size: 300px 440px;
+                background-position: center;
+            }
+            #c4{
+                background: radial-gradient(rgba(255,255,255, 0.7), rgb(232, 246, 106, 0.7), rgb(202, 177, 14, 0.7) ),
+                url("media/angel3.jpg");
+                background-size: 280px 330px;
+                background-position: center;
+            }
+            #c4:hover {
+                background: linear-gradient(rgba(234, 219, 84, 0.2)),
+                url("media/angel3.jpg");
+                background-size: 280px 330px;
+                background-position: center;
+            }
+            form {
+                background-color: rgba(247, 229, 206, 0.3);
+            }
+            textarea, input  {
+                border-radius: 5px;
+                background-color: rgba(255, 255, 255, 0.5);
+            }
+            button {
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-weight: bolder;
+                border-radius: 10px;
+                width: 100px;
+                background: linear-gradient(rgb(245, 241, 141), rgb(252, 100, 45))
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container" id="header" style="grid-area: header;">
+            <p>Choose <span id="your">Your</span> <span id="des">Destiny</span> <span id="now">Now!</span></p>
+        </div>
+        <div class="container" id="sidebar" style="grid-area: sidebar;">
+            <form>
+                <fieldset>
+                    <legend>Inquiry Form</legend>
+                    <br><label for="name">Name: </label>
+                    <input type="text" id="name" required minlength="5">
+
+                    <br><br><label for="email">Email: </label>
+                    <input type="email" id="email" required>
+
+                    <br><br><label for="inquiry">Inquiry: </label>
+                    <textarea id="inquiry" placeholder="Enter your inquiry here..." cols="30" rows="22" maxlength="600"></textarea><br>
+                    <button type="submit" style="cursor: pointer">Send</button>
+                </fieldset>
+            </form>
+        </div>
+        <div class="container" id="main" style="grid-area: main;">
+            <div class="card" id="c1"></div>
+            <div class="card" id="c2"></div>
+            <div class="card" id="c3"></div>
+            <div class="card" id="c4"></div>
+        </div>
+    </body>
+</html>

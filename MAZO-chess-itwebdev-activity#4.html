@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chess</title>
+        <style>
+            body {
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: linear-gradient(145deg, rgb(103, 3, 143), blue, rgb(11, 196, 42), rgb(249, 255, 192));
+            }
+            #header {
+                position: absolute;
+                top: 8%;
+                left: 40%;
+                z-index: 1000;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 33px;
+                font-weight: bolder;
+                color: rgb(243, 220, 16);
+                text-shadow: 1px 1px 3px rgb(7, 7, 7);
+            }
+            #person1 {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #person2 {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: 15px;
+            }
+            img {
+                border-radius: 20px;
+                width: 150px;
+                height: auto;
+                border: 5px solid rgb(142, 139, 139);
+                transition: all ease 0.3s;
+            }
+            #img1 {
+                box-shadow: -6px 6px rgba(0, 0, 0, 0.3);
+                margin-top: 20px;
+                margin-right: 20px;
+            }
+            #img2 {
+                margin-left: 20px;
+                margin-top: 20px;
+                box-shadow: 6px -6px rgba(0, 0, 0, 0.3);
+            }
+            #img1:hover{
+                cursor: pointer;
+                transform: scale(1.1);
+                box-shadow: 0 5px 15px white;
+                border-color: gold;
+            }
+            #img1:hover ~ #text1 {
+                visibility: hidden;
+            }
+            #img1:active {
+                box-shadow: 0 0px 40px red;
+                border-color: red;
+            }
+            #img2:hover{
+                cursor: pointer;
+                transform: scale(1.1);
+                box-shadow: 0 5px 15px white;
+                border-color: gold;
+            }
+            #img2:hover ~ #text2 {
+                visibility: hidden;
+            }
+            #img2:active {  
+                box-shadow: 0 0px 40px red;
+                border-color: red;
+            }
+            #square {
+                display: grid;
+                height: 500px;
+                width: 500px;
+                border-radius: 15px;
+                grid-template-columns: repeat(8, 12.5%);
+                grid-template-rows: repeat(8, 12.5%);
+                border: 15px groove  rgb(189, 144, 6);
+                grid-template-areas: 
+                "m1 m2 m3 m4 m5 m6 m7 m8" 
+                "n1 n2 n3 n4 n5 n6 n7 n8"
+                "o1 o2 o3 o4 o5 o6 o7 o8"
+                "p1 p2 p3 p4 p5 p6 p7 p8"
+                "q1 q2 q3 q4 q5 q6 q7 q8"
+                "r1 r2 r3 r4 r5 r6 r7 r8"
+                "s1 s2 s3 s4 s5 s6 s7 s8"
+                "t1 t2 t3 t4 t5 t6 t7 t8"
+                ;
+            transition: all ease 0.4s;                
+            }
+            #square:hover {
+                transform: scale(1.05);
+                box-shadow: 0 0 25px rgb(224, 213, 9);
+            }
+            #mini1{
+                text-align: center;
+                align-content: center;
+                border: 2px solid black;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                font-size: 25px;
+                background: rgb(243, 242, 242);
+            }
+            #mini1:nth-child(even){
+                background: black;
+                color:white;
+            }
+
+            #mini2{
+                text-align: center;
+                align-content: center;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                font-size: 25px;
+                border: 2px solid black;
+                background: rgb(243, 242, 242);
+            }
+            #mini2:nth-child(odd){
+                background: black;
+                color:white;
+            }
+            #mini3{
+                text-align: center;
+                align-content: center;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                font-size: 25px;
+                border: 2px solid black;
+                background: rgb(243, 242, 242);
+            }
+            #mini3:nth-child(even){
+                background: black;
+                color:white;
+            }
+
+            #mini4{
+                text-align: center;
+                align-content: center;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                font-size: 25px;
+                border: 2px solid black;
+                background: rgb(243, 242, 242);
+            }
+            #mini4:nth-child(odd){
+                background: black;
+                color:white;
+            }
+            #mini5{
+                text-align: center;
+                align-content: center;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                font-size: 25px;
+                border: 2px solid black;
+                background: rgb(243, 242, 242);
+            }
+            #mini5:nth-child(even){
+                background: black;
+                color:white;
+            }
+            #mini6{
+                text-align: center;
+                align-content: center;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                font-size: 25px;
+                border: 2px solid black;
+                background: rgb(243, 242, 242);
+            }
+            #mini6:nth-child(odd){
+                background: black;
+                color:white;
+            }
+            #mini7{
+                text-align: center;
+                align-content: center;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                font-size: 25px;
+                border: 2px solid black;
+                background: rgb(243, 242, 242);
+            }
+            #mini7:nth-child(even){
+                background: black;
+                color:white;
+            }
+            #mini8{
+                text-align: center;
+                align-content: center;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                font-size: 25px;
+                border: 2px solid black;
+                background: rgb(243, 242, 242);
+            }
+            #mini8:nth-child(odd){
+                background: black;
+                color:white;
+            }
+            
+                
+        </style>
+    </head>
+    <body>
+        <div id="header">LET'S PLAY CHESS</div>
+        <div id="person1" class="player">
+            <img id="img1" src="https://i.ibb.co/XksW7Nqh/person1.jpg" alt="person.jpg">
+            <p id="text1">hover or click ↑</p>
+        </div>
+        <div id="square">
+            <div id="mini1" style="grid-area: m1">B</div>
+            <div id="mini1" style="grid-area: m2">R</div>
+            <div id="mini1" style="grid-area: m3">O</div>
+            <div id="mini1" style="grid-area: m4">U</div>
+            <div id="mini1" style="grid-area: m5">G</div>
+            <div id="mini1" style="grid-area: m6">H</div>
+            <div id="mini1" style="grid-area: m7">T</div>
+            <div id="mini1" style="grid-area: m8"></div>
+
+            <div id="mini2" style="grid-area: n1">T</div>
+            <div id="mini2" style="grid-area: n2">O</div>
+            <div id="mini2" style="grid-area: n3"></div>
+            <div id="mini2" style="grid-area: n4">Y</div>
+            <div id="mini2" style="grid-area: n5">O</div>
+            <div id="mini2" style="grid-area: n6">U</div>
+            <div id="mini2" style="grid-area: n7"></div>
+            <div id="mini2" style="grid-area: n8"></div>
+
+            <div id="mini3" style="grid-area: o1">B</div>
+            <div id="mini3" style="grid-area: o2">Y</div>
+            <div id="mini3" style="grid-area: o3"></div>
+            <div id="mini3" style="grid-area: o4">J</div>
+            <div id="mini3" style="grid-area: o5">U</div>
+            <div id="mini3" style="grid-area: o6">D</div>
+            <div id="mini3" style="grid-area: o7">E</div>
+            <div id="mini3" style="grid-area: o8"></div>
+
+            <div id="mini4" style="grid-area: p1">M</div>
+            <div id="mini4" style="grid-area: p2">A</div>
+            <div id="mini4" style="grid-area: p3">Z</div>
+            <div id="mini4" style="grid-area: p4">0</div>
+            <div id="mini4" style="grid-area: p5"></div>
+            <div id="mini4" style="grid-area: p6">F</div>
+            <div id="mini4" style="grid-area: p7">O</div>
+            <div id="mini4" style="grid-area: p8">R</div>
+
+            <div id="mini5" style="grid-area: q1">I</div>
+            <div id="mini5" style="grid-area: q2">T</div>
+            <div id="mini5" style="grid-area: q3">W</div>
+            <div id="mini5" style="grid-area: q4">E</div>
+            <div id="mini5" style="grid-area: q5">B</div>
+            <div id="mini5" style="grid-area: q6">D</div>
+            <div id="mini5" style="grid-area: q7">E</div>
+            <div id="mini5" style="grid-area: q8">V</div>
+
+            <div id="mini6" style="grid-area: r1">G</div>
+            <div id="mini6" style="grid-area: r2">R</div>
+            <div id="mini6" style="grid-area: r3">I</div>
+            <div id="mini6" style="grid-area: r4">D</div>
+            <div id="mini6" style="grid-area: r5"></div>
+            <div id="mini6" style="grid-area: r6">C</div>
+            <div id="mini6" style="grid-area: r7">S</div>
+            <div id="mini6" style="grid-area: r8">S</div>
+
+            <div id="mini7" style="grid-area: s1">A</div>
+            <div id="mini7" style="grid-area: s2">C</div>
+            <div id="mini7" style="grid-area: s3">T</div>
+            <div id="mini7" style="grid-area: s4">I</div>
+            <div id="mini7" style="grid-area: s5">V</div>
+            <div id="mini7" style="grid-area: s6">I</div>
+            <div id="mini7" style="grid-area: s7">T</div>
+            <div id="mini7" style="grid-area: s8">Y</div>
+
+            <div id="mini8" style="grid-area: t1">0</div>
+            <div id="mini8" style="grid-area: t2">9</div>
+            <div id="mini8" style="grid-area: t3">/</div>
+            <div id="mini8" style="grid-area: t4">2</div>
+            <div id="mini8" style="grid-area: t5">5</div>
+            <div id="mini8" style="grid-area: t6">/</div>
+            <div id="mini8" style="grid-area: t7">2</div>
+            <div id="mini8" style="grid-area: t8">5</div>
+        </div>
+
+        <div id="person2" class="player">
+            <img id="img2" src="https://i.ibb.co/qMGxF5WL/person2.jpg" alt="person.jpg">
+            <p id="text2">hover or click ↑</p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Personal Profile</title>
+        <style>
+            body {
+                color: white;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-size: 120%;
+                font-family: Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif;
+
+                background: 
+                    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                    url("media/bg.jpg");
+                background-size: 120% auto;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-attachment: fixed;
+            }
+            @keyframes gradientShift {
+                0%   { background-position: 0% 50%; }
+                50%  { background-position: 100% 50%; }
+                50%  { background-position: 100% 50%; }
+                100% { background-position: 0% 50%; }
+            }
+            h3 {
+                display: inline-block;
+                border: 0.1em groove white;
+                border-style: dashed;
+                border-radius: 10px;
+                padding: 10px;
+            }
+
+            img {
+                box-shadow: 0px 0px 3px rgb(247, 245, 245);
+                width: 320px;
+                transition: all ease 0.8s;
+            }
+            img:hover {
+                transform: scale(1.05);
+                box-shadow: 0px 0px 10px white;
+            }
+            hr {
+                border: none;
+                border-top: 2px dotted rgb(205, 205, 205);
+                width: 50%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!--This is to test my html knowledge-->       
+        <h1><a href="#" target="_blank" style="text-decoration: none; color: white; font-size: 60px; font-family: Copperplate, Papyrus, fantasy;">MY PROFILE</a></h1>
+        
+        <br><h3>About Me</h3>
+        <p>I'm Jude. I'm currently studying BSIT in University of Cebu.<br>
+            I love coding, and I hope to become a full stack web developer in the future.<br>
+            I really love listening to music, I believe it's essential to our existence.</p>
+       
+        <hr>
+
+        <br><h3>Gallery of some of my adventures</h3><br>
+        <img src="media/1.jpg" alt="me.jpg"><br>  
+        <img src="media/2.jpg" alt="me.jpg"><br> 
+        <img src="media/3.jpg" alt="me.jpg"><br> 
+        <img src="media/4.jpg" alt="me.jpg"><br> 
+        <img src="media/5.jpg" alt="me.jpg"><br> 
+        <img src="media/6.jpg" alt="me.jpg"><br> 
+
+        <hr>
+
+        <br><h3>Favorites</h3>
+        <dl>
+            <dt><b>Animes</b></dt>
+            <dd>I love watching animes so much! My all-time favorites are:
+                <ul>
+                    <li>One Piece</li>
+                    <li>Demon Slayer</li>
+                    <li>Naruto</li>
+                    <li>Bleach</li>
+                    <li>Seven Deadly Sins</li>
+                </ul>
+            </dd>
+        </dl>
+
+        <dl>
+            <dt><b>Albums</b></dt>
+            <dd>Listening to music is life. Here are some of my favorite records:
+                <ul>
+                    <li>Eternal Sunshine by Ariana Grande</li>
+                    <li>Montevallo by Sam Hunt</li>
+                    <li>SOUR by Olivia Rodrigo</li>
+                    <li>The Rise and Fall of the Midwest Princess<br>by Chappell Roan</li>
+                    <li>Unorthodox Jukebox by Bruno Mars</li>
+                </ul>
+            </dd>
+        </dl>
+
+        <dl>
+            <dt><b>Movies</b></dt>
+            <dd>Movies have inspired me so much. Here are my all-time favorites:
+                <ul>
+                    <li>Thunderbolts</li>
+                    <li>Wicked</li>
+                    <li>Avengers: Endgame</li>
+                    <li>The Wild Robot</li>
+                    <li>Toys Story 4</li>
+                </ul>
+            </dd>
+        </dl>
+
+        <h4>Current favorite video</h4>
+        <video width="640" height="360" preload="metadata" poster="media/tanjiro.webp" controls loop muted>
+            <source src="media/tanjiro.mp4" type="video/mp4">
+            This browser does not support this video format.
+        </video><br>
+
+        <h4>Current favorite song</h4>
+        <audio muted controls loop>
+            <source src="media/subway.mp3" type="audio/mp3">
+            This browser does not support this audio format.
+        </audio><br>
+
+        <hr>
+
+        <h3>My class schedule</h3>
+        <table border="2" cellpadding="10" cellspacing="2" style="background-color: cornsilk; color: black; font-size: medium;">
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th colspan="2">Subject</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="3">Monday,<br>Wednesday, and <br>Friday<br>(MWF)</td>
+                    <td colspan="2">SOCIO 101</td>
+                    <td>7:30 - 8:30 AM</td>
+                </tr>
+                <tr>
+                    <td colspan="2">INTCOM11</td>
+                    <td>8:30 - 9:30 AM</td>
+                </tr>
+                <tr>
+                    <td colspan="2">COMPROG11</td>
+                    <td>9:30 - 11:30 AM</td>
+                </tr>
+
+                <tr>
+                    <td rowspan="3">Tuesday<br>Thursday<br>(TTH)</td>
+                    <td colspan="2">ENTREP 101</td>
+                    <td>7:30 - 9:00 AM</td>
+                </tr>
+                <tr>
+                    <td colspan="2">MATH 101S</td>
+                    <td>9:00 - 10:30 AM</td>
+                </tr>
+
+                 <tr>
+                    <td colspan="2">WENDEV11</td>
+                    <td>10:30 - 1:30 PM</td>
+                </tr>
+            </tbody>
+        </table><br>
+
+        <hr>
+
+        <br><h3>Contact me</h3>
+        <address>
+        <p style="text-indent: 30px;">+63 956612608</p>
+        <p style="text-indent: 30px;">judemazogwapz@gmail.com</p>
+        </address>
+        <p style="text-indent: 30px;"><i>or send me your inquiry by filling out the form below... </i></p>
+
+        <br>
+        <form action="" style="width: 400px; background-color: rgb(231, 247, 254); border: dotted 2px; color: blue; font-size: small;">
+            <fieldset style="border: none;">
+                <legend style="text-align: center;">Inquiry Form</legend><br>
+
+                <label for="name">Full name</label>
+                <input type="text" id="name" required minlength="4"><br><br>
+
+                <label for="email">Email address</label>
+                <input type="email" id="email" required><br><br>
+
+                <label for="inquiry">Your Inquiry</label><br><br>
+                <textarea id="inquiry" cols="40" rows="14" maxlength="500" placeholder="Enter text..."></textarea>
+                
+                <button type="submit" style="cursor: pointer;">Submit Inquiry</button>
+            </fieldset>
+        </form>
+    </body>
+</html>

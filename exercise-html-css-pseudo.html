@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML - CSS Exercise</title>
+        <style>
+            body {
+                height: 110vh;
+                display: grid;
+                grid-template-areas: 
+                "header header"
+                "navigation main";
+                grid-template-columns: 20% 80%;
+                grid-template-rows: 20% 80%;
+                background-color: rgb(187, 239, 248);
+            }
+            .container {
+                border: dotted 1px rgb(175, 172, 172);
+                padding: 10px;
+                border-radius: 20px;
+            }
+            .sub-con {
+                border-radius: 20px;
+            }
+            #header {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background: linear-gradient(rgb(238, 156, 251), rgba(255,255,255));
+            }
+            #logo {
+                position: absolute;
+                z-index: 1000;
+                top: 20px;
+                left: 20px;
+                width: 140px;
+                height: auto;
+            }
+            p {
+                font-family: "Brush Script MT", cursive;
+                font-size: 25px;
+            }
+            #webtitle {
+                font-family: Helvetica, sans-serif;
+                font-size: 30px;
+                color: rgb(14, 88, 226);
+                margin-bottom: -40px;
+                text-shadow: 2px 3px 4px white;
+            }
+            #navigation {
+                background: linear-gradient(90deg, rgb(76, 250, 85), rgb(167, 224, 167));
+            }
+            #pic1 {
+                margin: 30px 10px 10px 8px;
+                width: 260px;
+                border-radius: 20px;
+                box-shadow: 1px 1px 2px;
+                transition: all ease 0.5s;
+            }
+            #pic1:hover {
+                transform: scale(1.02);
+                box-shadow: 0px 0px 8px white;
+            }
+            #main {
+                display: grid;  
+                grid-template-columns: 60% 40%;
+            }
+            nav {
+                border-radius: 10px;
+                background: linear-gradient(90deg, rgba(7, 58, 154, 0.3),rgba(40, 237, 194, 0.3));
+            }
+
+            nav ul {
+                display: flex;
+                flex-direction: column;
+                list-style: none;
+                margin: 0;
+                gap: 15px;
+                padding: 0;
+            }
+
+            nav li a {
+                display: block;
+                width: 100%;
+                text-decoration: none;
+                color: rgb(77, 77, 77);
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 20px;
+                transition: all 0.3s ease;
+                padding: 15px 15px;
+                border-radius: 10px;
+                box-sizing: border-box;
+            }
+            nav li a:hover {
+                background: linear-gradient(90deg, rgba(32, 88, 40, 0.3), rgba(81, 215, 101, 0.3));
+                color: rgb(250, 250, 250);
+                letter-spacing: 2px;
+                text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+                font-weight: bold;
+                box-shadow: 0 5px 15px rgba(0,0,0, 0.5);
+            }
+            nav li a:active {
+                color: tomato;
+            }
+
+            #form-div {
+                padding: 10px;
+                font-family: Roboto, sans-serif	;
+                background: radial-gradient(rgb(255, 251, 251),rgb(237, 142, 142));
+                margin-right: 20px;
+            }
+            textarea {
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: 15px;
+            }
+            input,
+            textarea,
+            select {
+                border-radius: 5px;
+                border: 1px solid black;
+                transition: all ease-in 0.3s;
+            }
+            input:focus,
+            textarea:focus,
+            select:focus{
+                border:2px solid tomato;
+                background: linear-gradient(rgb(251, 250, 250), rgb(247, 233, 174));
+                outline: none;
+            }
+            #table-div {
+                display: flex;
+                flex-direction: column;
+                align-items: center ;
+                background: radial-gradient(rgb(255, 251, 251), rgb(255, 251, 251),rgb(142, 188, 237));
+                font-family: Garamond, serif;
+
+            }
+            table {
+                border: outset 5px rgb(48, 178, 234);
+                border-collapse: collapse;
+            }
+            table tr:nth-child(odd) {
+                background: linear-gradient(rgb(254, 253, 253), rgb(148, 248, 165));
+            }
+            table tr:nth-child(even) {
+                background: linear-gradient(rgb(254, 253, 253), rgb(148, 181, 248));
+            }
+            h3 {
+                text-shadow: 1px 1px 3px rgb(30, 151, 244);
+            }
+            th {
+                background-color: aquamarine;
+            }
+            button {
+                padding: 5px 20px;
+                margin: 10px 0 10px 40%;
+                font-size: 15px;
+                font-family: 'Trebuchet MS', sans-serif;
+                color: white;
+                background: linear-gradient(145deg, #6a11cb, #2575fc); /* gradient */
+                border: none;
+                border-radius: 12px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+                cursor: pointer;
+                transition: all 0.3s ease;
+                                    }
+            button:hover {
+                text-shadow: 1px 1px 2px rgba(254, 250, 250, 1);
+                letter-spacing: 1px;
+                color: rgb(14, 14, 14);
+                background: linear-gradient(145deg,rgb(219, 229, 27), rgb(241, 240, 173));
+                
+            }
+            button:active {
+                transform: translateY(3px);
+                background: linear-gradient(145deg,rgb(229, 27, 27), rgb(231, 167, 167) );   
+            }   
+        </style>
+    </head>
+    <body>
+        <div class="container" id="header" style="grid-area: header;">
+            <span id="webtitle"><h1>Computer Wizz</h1></span>
+            <p>Where computer wizards sharpen and unleash their magic!</p>
+            <img src="media/computer-architecture.png" alt="logo.png" id="logo">     
+        </div>
+        <div class="container" id="navigation" style="grid-area: navigation">
+            <nav>
+                <ul>
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/members">Members</a></li>
+                    <li><a href="/register">Register</a></li>
+                </ul>
+            </nav>
+            <img id="pic1" src="media/happy.webp" alt="pic.jpg"> 
+        </div>
+        <div class="container" id="main" style="grid-area: main">
+            <div class="sub-con" id="form-div">
+                <form>
+                    <legend style="text-align: center;">Fill-out the Registration Form</legend><br>
+                    <fieldset style="border: 2px dotted rgba(0 , 0, 0, 0.3);">
+                        <label for="name">Name: </label>
+                        <input type="text" required id="name" minlength="5" style="width: 400px;">
+                        <br><br><br>
+                        <label for="email">Email: </label>
+                        <input type="email" required id="email" style="margin-right: 50px; width: 200px;" >
+                        <label for="mobile">Mobile number: </label>
+                        <input type="text" required id="mobile" maxlength="11">
+                        <br><br><br>
+                        <label for="program">Choose your program:</label>
+                        <select id="program" style="margin-right: 20px;">
+                            <option value="BSIT">BSIT</option>
+                            <option value="BSIT">BSN</option>
+                            <option value="BSIT">BSA</option>
+                            <option value="BSIT">BSME</option>
+                            <option value="BSIT">BSEE</option>
+                        </select>
+                        <label for="year">Year: </label>
+                        <input type="number" required id="year" max="5" min="1" style="margin-right: 20px;">
+                        <label for="section">Section: </label>
+                        <input type="text" required id="section" maxlength="2">
+                        <br><br><br>
+                        <label for="bday">Date of Birth: </label>
+                        <input type="date" required id="bday" max="5" min="1" style="margin-right: 40px;">
+                        <label>Civil Status: </label>
+                        <input type="radio" id="single" name="status">
+                        <label for="single">Single</label>
+                        <input type="radio" id="married" name="status">
+                        <label for="married">Married</label>
+                    </fieldset><br>
+                    <fieldset style="border: 2px dotted rgba(0 , 0, 0, 0.3);">
+                        <label for="comments"> Reason for joining our Club: </label><br>
+                        <textarea id="comments" cols="80" rows="15" placeholder="Enter text..."></textarea>
+                        <button type="submit">Submit</button>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="sub-con" id="table-div">
+                <table border="2">
+                    <caption style="caption-side: bottom; margin-top: 10px;">These are the students enrolled in our club.</caption>
+                    <h3>Members of the Clerb</h3>
+                    <thead>
+                        <tr>
+                            <th colspan="3">Name</th>
+                            <th>Program</th>
+                            <th>Year</th>
+                            <th>Section</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="3">Lavander Girl Maya</td>
+                            <td>BSN</td>
+                            <td>3rd</td>
+                            <td>3B</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">Jasper Lee Santos</td>
+                            <td>BSIT</td>
+                            <td>2nd</td>
+                            <td>2F</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">Alyssa Rae Domingo</td>
+                            <td>BSA</td>
+                            <td>5th</td>
+                            <td>5A</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">Miguel Antonio Cruz</td>
+                            <td>BSME</td>
+                            <td>1st</td>
+                            <td>1D</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">Chloe Anne Ramirez</td>
+                            <td>BSN</td>
+                            <td>4th</td>
+                            <td>4C</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">Daniel Reyes</td>
+                            <td>BSEE</td>
+                            <td>3rd</td>
+                            <td>3E</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">Samantha Joy Lim</td>
+                            <td>BSIT</td>
+                            <td>2nd</td>
+                            <td>2B</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">Kevin John Dela Cruz</td>
+                            <td>BSME</td>
+                            <td>5th</td>
+                            <td>5D</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">Isabelle Tan</td>
+                            <td>BSA</td>
+                            <td>1st</td>
+                            <td>1A</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">Rafael Enriquez</td>
+                            <td>BSEE</td>
+                            <td>4th</td>
+                            <td>4F</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">Marianne Joy Castillo</td>
+                            <td>BSIT</td>
+                            <td>4th</td>
+                            <td>4A</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">Jerome Paolo Garcia</td>
+                            <td>BSN</td>
+                            <td>2nd</td>
+                            <td>2C</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">Fiona Grace Delos Reyes</td>
+                            <td>BSA</td>
+                            <td>3rd</td>
+                            <td>3F</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">Noel Vincent Ramos</td>
+                            <td>BSME</td>
+                            <td>1st</td>
+                            <td>1B</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">Angelica Faith Soriano</td>
+                            <td>BSEE</td>
+                            <td>5th</td>
+                            <td>5E</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">Harvey John Mendoza</td>
+                            <td>BSIT</td>
+                            <td>3rd</td>
+                            <td>3D</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">Clarisse Mae Gutierrez</td>
+                            <td>BSN</td>
+                            <td>1st</td>
+                            <td>1F</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">Lorenzo Miguel Pascual</td>
+                            <td>BSA</td>
+                            <td>4th</td>
+                            <td>4D</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">Bianca Rose Evangelista</td>
+                            <td>BSME</td>
+                            <td>2nd</td>
+                            <td>2A</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">Julius Adrian Torres</td>
+                            <td>BSEE</td>
+                            <td>3rd</td>
+                            <td>3C</td>
+                        </tr>
+                    </tbody>    
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
